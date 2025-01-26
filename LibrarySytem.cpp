@@ -7,21 +7,21 @@ class Book {
     private:
     string Title;
     string Author;
-    string Publisher;
-    int Year;
+    string ISBN;
+    bool Status;
 
-    Book(string title, string author, string publisher, int year){
+    Book(string title, string author, string isbn, bool status){
         Tittle = title;
         Author = author;
-        Publisher = publisher;
-        Year = year;
+        ISBN = isbn;
+        Status = status;
     }
 
     void display() {
      cout << "Title: " << Tittle << endl; 
      cout << "Author: "<< Author << endl;
-     cout << "Publisher: "<< Publisher << endl;
-     cout<< "Year: " << Year << endl;
+     cout << "International Standard Book Number: "<< ISBN << endl;
+     cout<< "Status: " << Status << endl;
     }
 };
 
@@ -47,11 +47,28 @@ class Library {
 
 class Member {
     private:
-    string name;
-    string address;
-    string phone;
-    int id;
-    int books[3];
+    string Name;
+    string Address;
+    string Phone;
+    int ID;
+    list <Books> Books;
+
+    Member( string name, string address, string phone, int id, int books){
+        Name = name;
+        Address = address;
+        Phone = phone;
+        ID = id;
+        Books = books;
+
+    }
+
+    void displayMembers() {
+        cout << "Name: " << Name << endl;
+        cout << "Address: " << Address << endl;
+        cout << "Phone: " << Phone << endl;
+        cout << "ID: " << ID << endl;
+        cout << "Books: " << Books << endl;
+    }
 };
 
 int main(){
