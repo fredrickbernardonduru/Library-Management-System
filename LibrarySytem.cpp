@@ -1,19 +1,19 @@
 #include <iostream>
-#include string;
-#include list;
+#include <string>
+#include <list>
 using namespace std;
 
 
 
 class Book {
     private:
-    string Tittle;
+    string Title;
     string Author;
     string ISBN;
     bool isAvailable;
 
     Book(string title, string author, string isbn){
-        Tittle = title;
+        Title = title;
         Author = author;
         ISBN = isbn;
         isAvailable = true;
@@ -22,7 +22,7 @@ class Book {
 
 
     // add getters
-    string getTitle() const {return Tittle;}
+    string getTitle() const {return Title;}
     string getAuthor() const {return Author;}
     string getISBN() const {return ISBN;}
     bool getAvailable() const {return isAvailable;}
@@ -31,7 +31,7 @@ class Book {
     void setAvailable(bool status) {isAvailable = status;}
 
     void display() const {
-     cout << "Title: " << Tittle << endl; 
+     cout << "Title: " << Title << endl; 
      cout << "Author: "<< Author << endl;
      cout << "International Standard Book Number: "<< ISBN << endl;
      cout<< "Status: " << (isAvailable ? "Available" : "Borrowed") << endl;
@@ -40,9 +40,9 @@ class Book {
 
 
 };
-
+//class libray
 class Library {
-    private:
+public:
     Book Books[100];
     int Count;
 
