@@ -15,6 +15,16 @@ class Library {
     private:
     Book books[100];
     int count;
-    }
+    };
+
+class Member {
+    private:
+    string name;
+    string address;
+    string phone;
+    int id;
+    int books[3];
+}
+
 
 
