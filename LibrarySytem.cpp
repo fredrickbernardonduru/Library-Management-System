@@ -73,6 +73,37 @@ class Member {
 
 int main(){
 
+    string Title;
+    string Author;
+    string ISBN;
+    bool Status;
+    cout << "Welcome to the library system" << endl;
+    cout << "Please enter the following members details: "<<endl;
+    cout << "Name: "<< endl;
+    cin >> Name;
+    cout << "Address: "<< endl;
+    cin >> Address;
+    cout << "Phone: "<< endl;
+    cin >> Phone;
+    cout << "ID: "<< endl;
+    cin >> ID;
+    cout << "Books: "<< endl;
+    cin >> Books;
+    Member member1( Name, Address, Phone, ID, Books);
+
+    
+    cout << "Please enter the following details: "<<endl;
+    cout << "Title: " << endl;
+    cin >> Title;
+    cout << "Author: " << endl;
+    cin >> Author;
+    cout << "International Standard Book Number(ISBN): "<< endl;
+    cin >> ISBN;
+    Cout << "Status:"<<endl;
+    cin >> Status;
+
+
+    Book book1(Title, Author, ISBN, Status);
     retun 0;
 }
 
