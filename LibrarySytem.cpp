@@ -1,6 +1,8 @@
 #include <iostream>
-#include namespace std;
-#onclude string;
+#include string;
+#include list;
+using namespace std;
+
 
 
 class Book {
@@ -8,21 +10,35 @@ class Book {
     string Tittle;
     string Author;
     string ISBN;
-    bool Status;
+    bool isAvailable;
 
-    Book(string title, string author, string isbn, bool status){
+    Book(string title, string author, string isbn){
         Tittle = title;
         Author = author;
         ISBN = isbn;
-        Status = status;
+        isAvailable = true;
     }
 
-    void display() {
+
+
+    // add getters
+    string getTitle() const {return Tittle;}
+    string getAuthor() const {return Author;}
+    string getISBN() const {return ISBN;}
+    bool getAvailable() const {return isAvailable;}
+
+    // add setter for isAvailable
+    void setAvailable(bool status) {isAvailable = status;}
+
+    void display() const {
      cout << "Title: " << Tittle << endl; 
      cout << "Author: "<< Author << endl;
      cout << "International Standard Book Number: "<< ISBN << endl;
-     cout<< "Status: " << Status << endl;
+     cout<< "Status: " << (isAvailable ? "Available" : "Borrowed") << endl;
     }
+
+
+
 };
 
 class Library {
@@ -51,14 +67,14 @@ class Member {
     string Address;
     string Phone;
     int ID;
-    list <Books> Books;
+    list <Book*> BorrowedBooks;
 
-    Member( string name, string address, string phone, int id, int books){
+    Member( string name, string address, string phone, int id){
         Name = name;
         Address = address;
         Phone = phone;
         ID = id;
-        Books = books;
+
 
     }
 
