@@ -1,11 +1,11 @@
-#include <iosteam>
-using namespace std;
-using string;
+#include <iostream>
+#include namespace std;
+#onclude string;
 
 
 class Book {
     private:
-    string Title;
+    string Tittle;
     string Author;
     string ISBN;
     bool Status;
@@ -91,7 +91,7 @@ int main(){
     cin >> Books;
     Member member1( Name, Address, Phone, ID, Books);
 
-    
+
     cout << "Please enter the following details: "<<endl;
     cout << "Title: " << endl;
     cin >> Title;
@@ -99,11 +99,11 @@ int main(){
     cin >> Author;
     cout << "International Standard Book Number(ISBN): "<< endl;
     cin >> ISBN;
-    Cout << "Status:"<<endl;
+    cout << "Status:"<<endl;
     cin >> Status;
 
 
     Book book1(Title, Author, ISBN, Status);
-    retun 0;
+    return 0;
 }
 
